@@ -1,0 +1,139 @@
+@value variables: '../../stylesheet/vars.css';
+@value primaryColor, accentColor, lightColor, primaryTextFontSize, secondaryTextFontSize from variables;
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.darkHeader {
+  height: 60px;
+  background-color: primaryColor;
+}
+
+.lightHeader {
+  position: relative;
+  height: 80px;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  height: 100%;
+}
+
+.container a {
+  text-decoration: none !important;
+}
+
+.logoWrapper {
+  position: relative;
+  display: block;
+  width: 110px;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  top: 14px;
+  left: 0px;
+  font-family: Rokkitt;
+  font-size: 20px;
+  color: #272727;
+  cursor: pointer;
+}
+
+.svg {
+  width: 49px;
+  height: 49px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #272727;
+}
+
+.phoneImg {
+  width: 14px;
+  height: 14px;
+  fill: accentColor;
+  margin-right: 12px;
+}
+
+.phoneNumber {
+  font-family: OswaldBold;
+  color: lightColor;
+  font-size: primaryTextFontSize;
+  line-height: 1.5;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+}
+
+.phoneNumber:hover {
+  color: lightColor;
+  text-decoration: none;
+}
+
+.burgerMenu {
+  width: 22px;
+  height: 10px;
+}
+
+.authWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .phoneImg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logoWrapper {
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    padding-left: 4px;
+    width: 82px;
+  }
+
+  nav {
+    width: 64%;
+  }
+
+  .logo {
+    font-size: 36px;
+    top: 15px;
+    /* left: 12px; */
+  }
+
+  .svg {
+    width: 68px;
+    height: 68px;
+  }
+
+  .phoneNumber {
+    font-size: secondaryTextFontSize;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 60px 0 60px;
+  }
+}
